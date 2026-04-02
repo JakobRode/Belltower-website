@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belltower — Eugene, Oregon</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">
+    <span class="nav-brand-name">Belltower</span>
+    <span class="nav-brand-sub">Eugene, Oregon</span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="calendar.html">Calendar</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="merch.html">Merch</a></li>
+    <li><a href="bookings.html">Bookings</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <img class="hero-img" src="band-truck-sunburst.png" alt="Belltower performing">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <p class="eyebrow">Indie Bluegrass &nbsp;&bull;&nbsp; Eugene, Oregon</p>
+      <h1 class="hero-title">Bell<br>tower</h1>
+      <p class="hero-sub">Where the high lonesome sound meets the Pacific Northwest.</p>
+      <div class="hero-btns">
+        <a href="music.html" class="btn btn-fill">Listen Now</a>
+        <a href="calendar.html" class="btn">See Shows</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ── -->
+  <section class="stripe">
+    <div class="section about-grid">
+      <img class="about-img" src="band-stone-ruins.png" alt="Belltower band photo">
+      <div class="about-text">
+        <p class="eyebrow" style="margin-bottom:0.5rem;">The Band</p>
+        <h2 class="section-title">Five voices,<br>one sound</h2>
+        <div class="ornament"><span class="ornament-glyph">&#9670;</span></div>
+        <p>Belltower is a local string band that plays folk, bluegrass, and traditional American roots inspired music.</p>
+        <p>All five bandmates are UO students and active members in the university music scene.</p>
+        <a href="gallery.html" class="btn" style="margin-top:1rem;">View Gallery</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── NEXT SHOWS ── -->
+  <section class="section">
+    <p class="eyebrow">Coming Up</p>
+    <h2 class="section-title">Upcoming Shows</h2>
+    <p class="section-sub">Shows coming soon</p>
+    <ul class="shows-list">
+      <li class="show-item">
+        <div class="show-date">
+          <div class="mo">April</div>
+          <div class="dy">4</div>
+          <div class="yr">2026</div>
+        </div>
+        <div class="show-info">
+          <h3>An evening with Belltower</h3>
+          <div class="venue">Macs Nightclub</div>
+          <div class="location">1626 Willamette St,</div>
+        </div>
+        <a href="calendar.html" class="btn">Details</a>
+      </li>
+      <!-- <li class="show-item">
+        <div class="show-date">
+          <div class="mo">April</div>
+          <div class="dy">4</div>
+          <div class="yr">2026</div>
+        </div>
+        <div class="show-info">
+          <h3>Show 2</h3>
+          <div class="venue">Venue 2</div>
+          <div class="location">Location 2</div>
+        </div>
+        <a href="calendar.html" class="btn">Details</a>
+      </li>
+      <li class="show-item">
+        <div class="show-date">
+          <div class="mo">Month</div>
+          <div class="dy">--</div>
+          <div class="yr">----</div>
+        </div>
+        <div class="show-info">
+          <h3>Show 3</h3>
+          <div class="venue">Venue 3</div>
+          <div class="location">Location 3</div>
+        </div>
+        <a href="calendar.html" class="btn">Details</a>
+      </li> -->
+    </ul>
+    <div style="margin-top:2.2rem;">
+      <a href="calendar.html" class="btn btn-fill">Full Calendar</a>
+    </div>
+  </section>
+
+  <!-- ── NPR TINY DESK ── -->
+  <section class="stripe">
+    <div class="section">
+      <p class="eyebrow">As Seen On</p>
+      <h2 class="section-title" style="margin-bottom:2rem;">NPR Tiny Desk Submission</h2>
+      <div style="position:relative;aspect-ratio:16/9;width:100%;border:1px solid var(--dark-4);">
+        <iframe
+          src="https://www.youtube.com/embed/AEtV3hT_4Xs"
+          title="Belltower — NPR Tiny Desk Submission"
+          style="position:absolute;inset:0;width:100%;height:100%;border:0;"
+          allowfullscreen
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ALBUM TEASER ── -->
+  <section class="stripe">
+    <div class="section" style="display:grid;grid-template-columns:210px 1fr;gap:3rem;align-items:center;">
+      <img src="all-we-cling-to-cover.png" alt="All We Cling To album cover"
+           style="width:100%;border:1px solid var(--dark-4);">
+      <div>
+        <p class="eyebrow">Latest Release</p>
+        <h2 class="section-title">All We Cling To</h2>
+        <div class="ornament"><span class="ornament-glyph">&#9670;</span></div>
+        <p style="color:var(--cream-dim);font-style:italic;margin-bottom:1.5rem;">
+          Contemplative, indie songwriting with traditional bluegrass instrumentation — exploring themes of identity and impermanence.
+        </p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <a href="music.html" class="btn btn-fill">Listen &amp; Stream</a>
+          <a href="merch.html" class="btn">Buy Vinyl</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-brand">Belltower</div>
+    <div class="footer-sub">Eugene, Oregon</div>
+    <ul class="footer-links">
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="merch.html">Merch</a></li>
+      <li><a href="bookings.html">Bookings</a></li>
+    </ul>
+    <div class="footer-copy">&copy; 2026 Belltower &mdash; All rights reserved.</div>
+  </footer>
+
+</div><!-- /page -->
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+</script>
+</body>
+</html>

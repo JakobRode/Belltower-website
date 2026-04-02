@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Belltower</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-brand">
+    <span class="nav-brand-name">Belltower</span>
+    <span class="nav-brand-sub">Eugene, Oregon</span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">&#9776;</button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="calendar.html">Calendar</a></li>
+    <li><a href="music.html">Music</a></li>
+    <li><a href="gallery.html" class="active">Gallery</a></li>
+    <li><a href="merch.html">Merch</a></li>
+    <li><a href="bookings.html">Bookings</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+
+  <div class="page-header">
+    <p class="eyebrow">Photos</p>
+    <h1 class="page-header-title">Gallery</h1>
+  </div>
+
+  <section class="section" style="padding-top:3rem;">
+    <div class="gallery-grid">
+
+      <!-- Row 1 -->
+      <div class="gal-item wide" onclick="openLightbox(this)">
+        <img src="band-outdoor-performance.png" alt="Belltower performing outdoors">
+      </div>
+      <div class="gal-item tall" onclick="openLightbox(this)">
+        <img src="band-stone-ruins.png" alt="Band at stone ruins">
+      </div>
+
+      <!-- Row 2 -->
+      <div class="gal-item tall" onclick="openLightbox(this)">
+        <img src="band-stone-window.png" alt="Band through stone window">
+      </div>
+      <div class="gal-item wide" onclick="openLightbox(this)">
+        <img src="band-truck-sunburst.png" alt="Band on truck tailgate, sunburst">
+      </div>
+
+      <!-- Row 3 -->
+      <div class="gal-item" onclick="openLightbox(this)">
+        <img src="band-indoors.png" alt="Band indoors with instruments">
+      </div>
+      <div class="gal-item" onclick="openLightbox(this)">
+        <img src="band-forest.png" alt="Playing in the forest">
+      </div>
+      <div class="gal-item" onclick="openLightbox(this)">
+        <img src="band-tall-grass.png" alt="Band in tall grass field">
+      </div>
+
+      <!-- Row 4 -->
+      <div class="gal-item wide" onclick="openLightbox(this)">
+        <img src="band-recording.png" alt="Recording session">
+      </div>
+      <div class="gal-item" onclick="openLightbox(this)">
+        <img src="album-where-soul-never-dies.png" alt="Where The Soul Never Dies album art">
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lb-close" onclick="closeLightbox()">&times;</button>
+    <img id="lbImg" src="" alt="">
+  </div>
+
+  <footer>
+    <div class="footer-brand">Belltower</div>
+    <div class="footer-sub">Eugene, Oregon</div>
+    <ul class="footer-links">
+      <li><a href="calendar.html">Calendar</a></li>
+      <li><a href="music.html">Music</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="merch.html">Merch</a></li>
+      <li><a href="bookings.html">Bookings</a></li>
+    </ul>
+    <div class="footer-copy">&copy; 2026 Belltower &mdash; All rights reserved.</div>
+  </footer>
+
+</div>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', () => {
+    document.getElementById('navLinks').classList.toggle('open');
+  });
+
+  function openLightbox(el) {
+    const src = el.querySelector('img').src;
+    const alt = el.querySelector('img').alt;
+    document.getElementById('lbImg').src = src;
+    document.getElementById('lbImg').alt = alt;
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox(e) {
+    if (!e || e.target !== document.getElementById('lbImg')) {
+      document.getElementById('lightbox').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>
+</body>
+</html>
